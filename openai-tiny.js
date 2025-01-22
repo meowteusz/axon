@@ -1,7 +1,7 @@
 export class OpenAIStream {
-    constructor(apiKey) {
-        this.apiKey = apiKey;
-        this.baseUrl = "https://api.openai.com/v1/chat/completions";
+    constructor() {
+        this.api_key = "CHANGE_ME";
+        this.base_url = "https://api.openai.com/v1/chat/completions";
     }
 
     async createCompletion(messages, options = {}) {
@@ -17,11 +17,11 @@ export class OpenAIStream {
         };
 
         try {
-            const response = await fetch(this.baseUrl, {
+            const response = await fetch(this.base_url, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization": `Bearer ${this.apiKey}`,
+                    "Authorization": `Bearer ${this.api_key}`,
                 },
                 body: JSON.stringify(requestBody),
             });
