@@ -8,6 +8,10 @@ function get_key() {
     return document.getElementById('openai_key').value;
 }
 
+document.getElementById('go').addEventListener('click', function() {
+    test();
+});
+
 async function test() {
     const client = new OpenAIStream(get_key());
     
