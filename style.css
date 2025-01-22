@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+}
+
+.container.center {
+    align-items: center;
+}
+
+.container.grow {
+    flex-grow: 1;
+}
+
+.grow {
+    flex-grow: 1;
+}
