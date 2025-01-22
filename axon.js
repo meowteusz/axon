@@ -1,27 +1,41 @@
 import { OpenAIStream } from './openai-tiny.js';
 
-document.getElementById('openai_key').addEventListener('blur', function() {
-    document.querySelector('#content pre').textContent = this.value;
-  });
+function check_key(){
+    let key = document.getElementById('openai_key').value;
 
-function get_key() {
-    return document.getElementById('openai_key').value;
+    if(key.length == 0){
+        console.error('No API key provided.');
+        return false;
+    }
+
+    if(!key.startsWith('sk-proj-')){
+        console.error('Invalid API key provided.');
+        return false;
+    }
+
+    if(key.length < 50){
+        console.error('API key too short. Did you accidentally paste the project key?');
+        return false;
+    }
 }
 
-document.getElementById('go').addEventListener('click', function() {
-    test();
-});
+// Basic client declaration; replace key once checks pass
+const gippity = new OpenAIStream();
 
-async function test() {
-    const client = new OpenAIStream(get_key());
-    
+document.getElementById('openai_key').addEventListener('focusout', function() {
+    if(check_key()){
+        gippity.api_key = document.getElementById('openai_key').value;
+    }
+  });
+
+async function mk_completion() {
     const messages = [
         { role: 'developer', content: 'You are a helpful assistant.' },
         { role: 'user', content: 'testing to see if this is working!' }
     ];
 
     try {
-        const stream = await client.createCompletion(messages);
+        const stream = await gippity.createCompletion(messages);
         let fullResponse = '';
         
         for await (const chunk of stream) {
