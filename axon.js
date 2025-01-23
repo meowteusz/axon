@@ -84,7 +84,9 @@ async function continue_main() {
 
     chat_window.appendChild(system_message().cloneNode(true));
 
-    await mk_completion(context);
+    if (context != "test") {
+        await mk_completion(context);
+    }
 
     return true;
 }
