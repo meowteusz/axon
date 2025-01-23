@@ -8,14 +8,11 @@
 }
 
 .branch-arrow.down {
-    left: 50%;
-    transform: translate(-50%, 50%) rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .branch-arrow.right {
-    top: 50%;
-    right: -3rem; /* Moved right to clear the border */
-    transform: translate(50%, -50%) rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .user_input {
