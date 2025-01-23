@@ -10,17 +10,47 @@
     <script type="module" src="openai-tiny.js" defer></script>
   </head>
   <body>
-    <div class="container center" id="apikey_header">
+    <div class="container center_items" id="apikey_header">
       <div>
         <h1>AXON</h1>
       </div>
       <div class="container grow">
-        <input id="openai_key" class="grow" type="text" placeholder="OpenAI key..."/>
+        <input
+          id="openai_key"
+          class="grow"
+          type="text"
+          placeholder="OpenAI key..."
+        />
       </div>
     </div>
-    <div id="content">
-      <pre></pre>
+    <div id="chat" class="container vertical center_items">
+      <div class="user_bubble">
+        <div class="content">
+          <textarea class="chat_input" placeholder="Ask a question..." rows="5" cols="60"></textarea>
+          <div class="container rtl">
+            <button id="send_button">Send</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <button id="go">test api</button>
+
+    <template id="user_bubble_template">
+      <div class="user_bubble">
+        <div class="content">
+          <textarea class="chat_input" placeholder="Ask a question..." rows="5" cols="60"></textarea>
+          <div class="container rtl">
+            <button id="send_button">Send</button>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="system_bubble_template">
+      <div class="system_bubble">
+        <div class="content">
+          <p class="stream_here"></p>
+        </div>
+      </div>
+    </template>
   </body>
 </html>

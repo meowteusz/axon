@@ -1,24 +1,13 @@
-.chat_bubble {
+.user_bubble {
     max-width: 50rem;
     padding: 1rem;
     border-radius: 0.5rem;
     position: relative;
-    background: #E8E7E7;
+    background: #b7b7b7;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.chat_bubble.sent {
-    margin-left: auto;
-    background: #007bff;
-    color: white;
-}
-
-.chat_bubble.received {
-    margin-right: auto;
-    background: #E8E7E7;
-}
-
-#chat_input {
+.chat_input {
     max-width: 100%;
     padding: 1rem;
     border: none;
@@ -26,6 +15,15 @@
     border-top: 1px solid #E8E7E7;
     border-bottom: 1px solid #E8E7E7;
     font-size: 1rem;
+}
+
+.system_bubble {
+    max-width: 50rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    background: #B7B7B7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .container {
