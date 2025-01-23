@@ -22,15 +22,11 @@
     flex-direction: column;
 }
 
-.container.horizontal {
-    flex-direction: row;
-}
-
-.container.center_items {
+.container.justify-center {
     justify-content: center;
 }
 
-.container.vertical.center_items {
+.container.align-center {
     align-items: center;
 }
 
