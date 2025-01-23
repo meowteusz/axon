@@ -12,4 +12,12 @@ Conversations are rarely linear. It is in our nature and best interests to go on
 - [x] Single question/answer function test
 - [ ] Programatically create chat bubbles with correct checks
 - [ ] Tangent chat interface breakouts
-- [ ] 
+- [x] Make arrows gray initially, black on hover and when the path is chosen
+- [ ] Remove click functionality from arrows after a path is chosen
+- [ ] Add markdown support to system completion messages
+- [ ] Smart expanding text area: 10? lines then scroll
+
+#### Fun TODOs that should get done but aren't crucial to main function
+- [ ] Import/Export feature
+    - [ ] JSON conversation object store
+- [ ] Alternate API key memory storage or functionality
