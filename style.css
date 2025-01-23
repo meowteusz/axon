@@ -1,3 +1,23 @@
+.branch-arrow {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.branch-down {
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.branch-right {
+    top: 50%;
+    right: -3rem; /* Moved right to clear the border */
+    transform: translate(50%, -50%) rotate(-45deg);
+}
+
 .chat_input {
     width: 100%;
     min-height: 4rem;
