@@ -60,6 +60,7 @@ async function respond(arrow) {
 
     // Mark this arrow's path as taken
     arrow.classList.add("active");
+    arrow.onclick = null;
 
     // Get the text from the user message
     let query =
@@ -103,6 +104,7 @@ async function respond(arrow) {
 function new_message(arrow) {
     // Mark this arrow's path as taken
     arrow.classList.add("active");
+    arrow.onclick = null;
 
     // The parent of the parent of the arrow is
     // the thread in question (be that a tangent
