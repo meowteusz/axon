@@ -26,19 +26,11 @@
       </div>
 
       <div id="chat" class="container vertical align-center mt-3">
-        <!-- Always load the first user chat bubble statically for speed -->
+        <!-- Load the first user message statically -->
         <div class="message">
-          <textarea
-            class="context"
-            placeholder="Type something..."
-            rows="5"
-            cols="60"
-          ></textarea>
+          <textarea placeholder="Message ChatGPT" rows="5" cols="60"></textarea>
           <div class="container align-center mt-1">
-            <div
-              class="branch-arrow down current"
-              onclick="continue_main()"
-            ></div>
+            <div class="branch-arrow down" onclick="respond(this)"></div>
           </div>
         </div>
       </div>
@@ -47,17 +39,9 @@
     <div id="templates">
       <template id="user_message_template">
         <div class="message">
-          <textarea
-            class="context"
-            placeholder="Type something..."
-            rows="5"
-            cols="60"
-          ></textarea>
+          <textarea placeholder="Message ChatGPT" rows="5" cols="60"></textarea>
           <div class="container align-center mt-1">
-            <div
-              class="branch-arrow down current"
-              onclick="continue_main()"
-            ></div>
+            <div class="branch-arrow down" onclick="respond(this)"></div>
           </div>
         </div>
       </template>
@@ -71,9 +55,9 @@
               cols="60"
               readonly
             ></textarea>
-            <div id="tangent" class="branch-arrow right current"></div>
+            <div class="branch-arrow right" onclick="new_message(this)"></div>
           </div>
-          <div id="main" class="branch-arrow down current"></div>
+          <div class="branch-arrow down" onclick="new_message(this)"></div>
         </div>
       </template>
     </div>
