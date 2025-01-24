@@ -12,7 +12,7 @@ Conversations are rarely linear. It is in our nature and best interests to go on
 - [x] Single question/answer function test
 - [x] Make arrows gray initially, black on hover and when the path is chosen
 - [x] Remove click functionality from arrows after a path is chosen
-- [ ] Conversation chain parsing and passing to completion API
+- [x] Conversation chain parsing and passing to completion API
 - [ ] Programatically create in-thread completions with correct checks
 - [ ] Tangent chat interface breakouts
 - [ ] Add markdown support to system completion messages

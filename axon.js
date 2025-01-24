@@ -14,10 +14,12 @@ const system_message =
 
 // Instantiate main objects
 const gippity = new OpenAIStream();
+let messages = [];
 
 // Utility Functions
 function check_key() {
     let api_key = key_input.value;
+    console.log(api_key)
 
     if (api_key == "test") {
         console.log("dev mode on");
@@ -70,9 +72,8 @@ async function respond(arrow) {
     let query =
         arrow.parentElement.parentElement.querySelector("textarea").value;
 
-    const messages = [
-        { role: "user", content: query },
-    ];
+    // Append the user message to the messages array
+    messages.push({ role: "user", content: query });
 
     // Append a blank system response message
     let thread = arrow.parentElement.parentElement.parentElement;
@@ -97,6 +98,8 @@ async function respond(arrow) {
         }
 
         stream_here.classList.remove("stream_here");
+
+        messages.push({ role: "assistant", content: full_response });
 
         return full_response;
     } catch (error) {
@@ -124,6 +127,7 @@ function new_message(arrow) {
 // lest ye suffer reference errors
 window.respond = respond;
 window.new_message = new_message;
+window.messages = messages;
 
 // Event Listeners
 key_input.addEventListener("input", check_key);
