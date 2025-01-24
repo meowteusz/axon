@@ -10,13 +10,13 @@ Conversations are rarely linear. It is in our nature and best interests to go on
 - [x] Clean up code into logical blocks
 - [x] API key ingest mechanism and module link
 - [x] Single question/answer function test
-- [x] Programatically create in-thread completions with correct checks
-- [ ] Tangent chat interface breakouts
 - [x] Make arrows gray initially, black on hover and when the path is chosen
 - [x] Remove click functionality from arrows after a path is chosen
+- [ ] Conversation chain parsing and passing to completion API
+- [ ] Programatically create in-thread completions with correct checks
+- [ ] Tangent chat interface breakouts
 - [ ] Add markdown support to system completion messages
 - [ ] Smart expanding text area: 10? lines then scroll
-- [ ] Conversation chain parsing and passing to completion API
 
 #### Fun TODOs that should get done but aren't crucial to main function
 - [ ] Import/Export feature
