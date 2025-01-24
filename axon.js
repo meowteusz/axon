@@ -62,6 +62,10 @@ async function respond(arrow) {
     arrow.classList.add("active");
     arrow.onclick = null;
 
+    // Apply sent styling to the textarea
+    let textarea = arrow.parentElement.parentElement.querySelector("textarea");
+    textarea.classList.add("sent");
+
     // Get the text from the user message
     let query =
         arrow.parentElement.parentElement.querySelector("textarea").value;
@@ -83,7 +87,7 @@ async function respond(arrow) {
             stream_here.classList.remove("stream_here");
             return true;
         }
-        
+
         const stream = await gippity.createCompletion(messages);
         let full_response = "";
 
